@@ -1,0 +1,116 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*--RESET--*/
+body {
+    width: 100vw;
+    height: 100vh;
+   background: linear-gradient(to bottom, #11998e, #038C7F);
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-family: sans-serif;
+}
+
+
+h1{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #F2B263;
+}
+
+#input {
+ background-color: #F2ECE4;
+ color:#025850;
+ width: 80%;
+ font-size: 16px;
+}
+
+#findButton {
+    width: 80%;
+    background-color: #03A688;
+    font-size: 16px;
+    color: #F2ECE4;
+
+}
+
+#resultado {
+    margin-top: 35px;
+    width: 80%;
+    border: 2px solid #F2ECE4;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#resultado li{
+    font-size: 16px;
+    margin:10px 50px;
+    color: #F2ECE4;
+    
+}
+
+
+@media (min-width: 769px) {
+    h1{
+        font-size: 55px;
+    }
+    #input {
+        font-size: 25px;
+        width: 60%;
+    }
+    #findButton {
+        font-size: 25px;
+        width: 35%;
+    }
+    #resultado li{
+        font-size: 25px;
+    }
+}
