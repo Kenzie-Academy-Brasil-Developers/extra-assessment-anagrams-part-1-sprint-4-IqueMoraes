@@ -96,6 +96,9 @@ h1{
     color: #F2ECE4;
     
 }
+#caixa_array{
+    margin: 20px;
+}
 
 
 @media (min-width: 769px) {

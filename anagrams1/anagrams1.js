@@ -8,6 +8,7 @@ const dictionary = palavras.map((word) => alphabetize(word));
 // console.log(dictionary)
 const button = document.getElementById("findButton");
 const caixa_resultado = document.getElementById('caixa_resultado')
+const caixa_array = document.getElementById('caixa_array')
 
 
 function alphabetize(a) {
@@ -30,9 +31,12 @@ function getAnagramsOf(x){
 return equalWords;
 }
 
-function limparTela(caixa_resultado){
+function limparTela(){
     while (caixa_resultado.firstChild) {
         caixa_resultado.removeChild(caixa_resultado.firstChild);
+    }
+    while(caixa_array.firstChild){
+        caixa_array.removeChild(caixa_array.firstChild)
     }
 }
 
@@ -40,7 +44,8 @@ function imprimir(textContent, typedText){
     let resultado = document.createElement('ul');
     resultado.setAttribute('id', 'resultado');
     caixa_resultado.appendChild(resultado);
-
+    caixa_array.innerHTML =`[${textContent}]`;
+    
     for(let i=0; i<textContent.length; i++){
         if(textContent[i] !== typedText){
 
@@ -55,7 +60,7 @@ function imprimir(textContent, typedText){
 button.addEventListener("click", function () {
     let typedText = document.getElementById("input").value;
     let textContent = getAnagramsOf(typedText);
-    limparTela(caixa_resultado);
+    limparTela();
     imprimir(textContent, typedText);
 
 });
